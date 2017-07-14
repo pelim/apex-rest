@@ -3,13 +3,13 @@ public abstract class AbstactRestHandler {
     public static final String HTTP_POST = 'POST';
     
     public abstract String getActionName();
+    public abstract String getRoute();
     public abstract String getHttpMethod();
+    
     public abstract void execute(RestRequest request, RestResponse response);
     
-    public static boolean isMatch(AbstactRestHandler restHandler, String httpMethod, String restUrl){
-        return httpMethod != null && 
-            httpMethod.equalsIgnoreCase(restHandler.getHttpMethod()) &&
-            restUrl.containsIgnoreCase(restHandler.getActionName());    
+    public static Matcher matchRoute(AbstactRestHandler restHandler, String restUrl) {
+		return Pattern.compile(restHandler.getRoute()).matcher(restUrl);
     }
     
 

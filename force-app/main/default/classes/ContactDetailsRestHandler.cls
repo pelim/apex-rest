@@ -24,8 +24,14 @@ public with sharing class ContactDetailsRestHandler extends AbstactRestHandler {
     
     public static final String ACTION = 'getContactDetails';
     
+    public static final String ROUTE = '^/contacts/(.*)$';
+
     public override String getActionName(){
         return ACTION;    
+    }
+    
+    public override String getRoute(){
+        return ROUTE;    
     }
     
     public override String getHttpMethod(){

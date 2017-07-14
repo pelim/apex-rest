@@ -14,8 +14,12 @@ global class RestApi {
         for(System.Type restHandlerType : restHandlerTypes){
             AbstactRestHandler restHandler = (AbstactRestHandler)restHandlerType.newInstance();
             if (restHandler != null){
-                if (AbstactRestHandler.isMatch(restHandler, requestHttpMethod, requestUrl)){
+                Matcher routeMatcher = AbstactRestHandler.matchRoute(restHandler, requestUrl);
+                if(routeMatcher.matches()) {
                     try{
+                        if(routeMatcher.groupCount() > 0) {
+							request.addParameter('id', routeMatcher.group(1));
+                        }
                         restHandler.execute(request, response);
                         return;
                     } catch(Exception ex){
