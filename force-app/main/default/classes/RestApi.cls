@@ -17,8 +17,9 @@ global class RestApi {
                 Matcher routeMatcher = AbstactRestHandler.matchRoute(restHandler, requestUrl);
                 if(routeMatcher.matches()) {
                     try{
+                        // @TODO: map url parameter dynamicly
                         if(routeMatcher.groupCount() > 0) {
-							request.addParameter('id', routeMatcher.group(1));
+                            request.addParameter('id', routeMatcher.group(1));
                         }
                         restHandler.execute(request, response);
                         return;

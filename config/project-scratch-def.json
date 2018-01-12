@@ -1,7 +1,8 @@
 {
-    "orgName": "example.org",
+    "orgName": "example org",
     "edition": "Developer",
+    "features": "ForceComPlatform;AuthorApex;Communities;API;ServiceCloud;CustomerSelfService",
     "orgPreferences" : {
-        "enabled": ["S1DesktopEnabled"]
+        "enabled":  []
     }
 }
