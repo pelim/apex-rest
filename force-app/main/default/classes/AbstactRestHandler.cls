@@ -9,13 +9,6 @@ public abstract class AbstactRestHandler {
 
     public abstract void execute(RestRequest request, RestResponse response);
 
-    public static Matcher matchRoute(AbstactRestHandler restHandler, String restUrl) {
-        System.debug(restUrl);
-        System.debug(restHandler.getRoute());
-        return Pattern.compile(restHandler.getRoute()).matcher(restUrl);
-    }
-
-
     public static void statusCodeResponse(RestResponse response, Integer statusCode){
         response.statusCode = statusCode;
     }
