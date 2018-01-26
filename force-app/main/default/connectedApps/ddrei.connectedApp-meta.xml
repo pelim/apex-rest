@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>developer@example.org</contactEmail>
+    <label>ddrei</label>
+    <oauthConfig>
+        <callbackUrl>https://localhost:9090/callback</callbackUrl>
+        <consumerKey>3MVG9sSN_PMn8tjRCuYVWSkLT0RfBku7ogz6ErvHh339Zd.FHS6VOpPBYeMMk8o_zBUmooF_j97hYQLgTg1YJ</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>
