@@ -1,7 +1,7 @@
 {
     "orgName": "example org",
     "edition": "Developer",
-    "features": "ForceComPlatform;AuthorApex;Communities;API;ServiceCloud;CustomerSelfService",
+    "features": "ForceComPlatform;AuthorApex;Communities;API;ServiceCloud;CustomerSelfService,DebugApex",
     "orgPreferences" : {
         "enabled":  []
     }
